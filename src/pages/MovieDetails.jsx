@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
-import axios from "axios";
+import { Link, useParams } from "react-router-dom";
 
 const API_KEY = "22de56f0";
 
@@ -67,13 +66,13 @@ export default function MovieDetail() {
               <span className="font-semibold text-pink-400">Actors:</span> {movie.Actors}
             </div>
           </div>
-          <a
-            href="https://example.com/download.mp4"
+          <Link
+            to="https://example.com/download.mp4"
             download
             className="mt-8 text-center inline-block px-8 py-3 rounded-2xl bg-gradient-to-r from-pink-500 via-fuchsia-500 to-blue-500 text-white font-bold text-lg shadow-lg hover:scale-105 hover:from-pink-600 hover:to-blue-600 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-pink-400"
           >
             ⬇️ Download Movie
-          </a>
+          </Link>
         </div>
       </div>
     </div>

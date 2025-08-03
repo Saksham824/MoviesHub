@@ -18,13 +18,13 @@ export default function MovieCard({ id, title, poster, year }) {
         >
           View Details
         </Link>
-        <a
+        <Link
           href="https://example.com/download.mp4" // replace with real if you have
           download
           className="w-full px-4 py-2 text-center rounded-lg bg-pink-500 text-white hover:bg-pink-600 transition"
         >
           Download
-        </a>
+        </Link>
       </div>
     </div>
   );

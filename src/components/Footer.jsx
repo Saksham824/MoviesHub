@@ -68,7 +68,7 @@ export default function Footer({ setFilter }) {
               {genres.map((genre) => (
                 <li key={genre}>
                   {/* Use a button or Link with onClick to set the filter */}
-                  <a
+                  <Link
                     href="#"
                     className="hover:text-pink-400 transition cursor-pointer"
                     onClick={e => {
@@ -78,7 +78,7 @@ export default function Footer({ setFilter }) {
                     }}
                   >
                     {genre}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>

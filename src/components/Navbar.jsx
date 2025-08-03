@@ -1,5 +1,6 @@
 // Navbar.jsx
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 const genres = ["Action", "Horror", "Adventure", "Comedy", "Romance", "Sci-Fi"];
 
@@ -11,8 +12,8 @@ const Navbar = ({ setFilter }) => {
     <nav className="backdrop-blur-md bg-gradient-to-r from-slate-900/80 via-slate-800/80 to-slate-900/80 border-b border-slate-700/50 shadow-xl sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16">
         {/* Logo */}
-        <a
-          href="/"
+        <Link
+          to="/"
           className="flex items-center gap-2 font-bold text-2xl tracking-wide relative"
         >
           <span
@@ -28,13 +29,13 @@ const Navbar = ({ setFilter }) => {
           <span className="bg-gradient-to-r from-pink-400 via-fuchsia-400 to-blue-400 bg-clip-text text-transparent">
             MovieHub
           </span>
-        </a>
+        </Link>
 
         {/* Desktop Links */}
         <ul className="hidden md:flex gap-8 items-center">
           <li>
-            <a
-              href="/"
+            <Link
+              to="/"
               onClick={e => {
                 e.preventDefault();
                 setFilter({ type: "all" });
@@ -42,11 +43,11 @@ const Navbar = ({ setFilter }) => {
               className="relative px-3 py-1.5 rounded-md font-medium transition-all duration-200 hover:bg-pink-500/10 hover:text-pink-400 focus-visible:ring-2 ring-pink-400"
             >
               Home
-            </a>
+            </Link>
           </li>
           <li>
-            <a
-              href="#"
+            <Link
+              to="#"
               onClick={e => {
                 e.preventDefault();
                 setFilter({ type: "type", value: "movie" });
@@ -54,7 +55,7 @@ const Navbar = ({ setFilter }) => {
               className="relative px-3 py-1.5 rounded-md font-medium transition-all duration-200 hover:bg-pink-500/10 hover:text-pink-400 focus-visible:ring-2 ring-pink-400"
             >
               Movies
-            </a>
+            </Link>
           </li>
           {/* Genres Dropdown */}
           <li className="relative group">
@@ -76,8 +77,8 @@ const Navbar = ({ setFilter }) => {
             <ul className="absolute left-0 mt-2 w-44 bg-slate-800/95 border border-slate-700 rounded-xl shadow-2xl opacity-0 group-hover:opacity-100 group-hover:visible invisible transition-all duration-300 z-20 py-2 backdrop-blur-md">
               {genres.map((genre) => (
                 <li key={genre}>
-                  <a
-                    href="#"
+                  <Link
+                    to="#"
                     onClick={e => {
                       e.preventDefault();
                       setFilter({ type: "genre", value: genre });
@@ -85,14 +86,14 @@ const Navbar = ({ setFilter }) => {
                     className="block px-5 py-2 rounded-lg hover:bg-pink-500/80 hover:text-white transition-all duration-150"
                   >
                     {genre}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
           </li>
           <li>
-            <a
-              href="#"
+            <Link
+              to="#"
               onClick={e => {
                 e.preventDefault();
                 setFilter({ type: "type", value: "series" });
@@ -100,15 +101,15 @@ const Navbar = ({ setFilter }) => {
               className="relative px-3 py-1.5 rounded-md font-medium transition-all duration-200 hover:bg-pink-500/10 hover:text-pink-400 focus-visible:ring-2 ring-pink-400"
             >
               Series
-            </a>
+            </Link>
           </li>
           <li>
-            <a
-              href="/contact"
+            <Link
+              to="/contact"
               className="relative px-3 py-1.5 rounded-md font-medium transition-all duration-200 hover:bg-pink-500/10 hover:text-pink-400 focus-visible:ring-2 ring-pink-400"
             >
               Contact
-            </a>
+            </Link>
           </li>
         </ul>
 
@@ -153,8 +154,8 @@ const Navbar = ({ setFilter }) => {
       >
         <ul className="flex flex-col gap-2 px-8">
           <li className="text-white/50">
-            <a
-              href="/"
+            <Link
+              to="/"
               onClick={e => {
                 e.preventDefault();
                 setFilter({ type: "all" });
@@ -163,11 +164,11 @@ const Navbar = ({ setFilter }) => {
               className="block py-2 rounded-lg hover:bg-pink-500/20 hover:text-pink-400 transition-all font-medium"
             >
               Home
-            </a>
+            </Link>
           </li>
           <li className="text-white/50">
-            <a
-              href="#"
+            <Link
+              to="#"
               onClick={e => {
                 e.preventDefault();
                 setFilter({ type: "type", value: "movie" });
@@ -176,7 +177,7 @@ const Navbar = ({ setFilter }) => {
               className="block py-2 rounded-lg hover:bg-pink-500/20 hover:text-pink-400 transition-all font-medium"
             >
               Movies
-            </a>
+            </Link>
           </li>
           <li className="text-white/50">
             <button
@@ -204,8 +205,8 @@ const Navbar = ({ setFilter }) => {
             >
               {genres.map((genre) => (
                 <li key={genre}>
-                  <a
-                    href="#"
+                  <Link
+                    to="#"
                     onClick={e => {
                       e.preventDefault();
                       setFilter({ type: "genre", value: genre });
@@ -215,14 +216,14 @@ const Navbar = ({ setFilter }) => {
                     className="block text-white py-1 text-sm rounded hover:bg-pink-500/80 hover:text-white transition-all"
                   >
                     {genre}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
           </li>
           <li className="text-white/50">
-            <a
-              href="#"
+            <Link
+              to="#"
               onClick={e => {
                 e.preventDefault();
                 setFilter({ type: "type", value: "series" });
@@ -231,16 +232,16 @@ const Navbar = ({ setFilter }) => {
               className="block py-2 rounded-lg hover:bg-pink-500/20 hover:text-pink-400 transition-all font-medium"
             >
               Series
-            </a>
+            </Link>
           </li>
           <li className="text-white/50">
-            <a
-              href="/contact"
+            <Link
+              to="/contact"
               className="block py-2 rounded-lg hover:bg-pink-500/20 hover:text-pink-400 transition-all font-medium"
               onClick={() => setMenuOpen(false)}
             >
               Contact
-            </a>
+            </Link>
           </li>
         </ul>
       </div>

@@ -17,7 +17,7 @@ function DetailItem({ label, value }) {
   if (!value || value === "N/A") return null;
 
   return (
-    <div className="group rounded-2xl border border-white/8 bg-white/[0.035] p-4 transition duration-300 hover:border-pink-300/20 hover:bg-white/[0.055] motion-reduce:transition-none">
+    <div className="group rounded-2xl border border-white/8 bg-white/[0.035] p-4 transition duration-300 hover:border-pink-300/20 hover:bg-white/5.5 motion-reduce:transition-none">
       <dt className="text-[10px] font-bold uppercase tracking-[0.2em] text-slate-500">
         {label}
       </dt>
